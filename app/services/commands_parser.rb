@@ -10,7 +10,8 @@ class CommandsParser
     case @cmd
       when /#{Constants::HELP_CMD}/
         Constants::HELP_CMD
-      when /#{Constants::GENERATE_CMD}/
+      when /#{Constants::GENERATE_CMD}\s(\d+)/
+        @args.push($1)
         Constants::GENERATE_CMD
       else
         Constants::NOT_FOUND_MSG

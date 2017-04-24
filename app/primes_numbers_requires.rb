@@ -4,3 +4,5 @@ require './app/services/commands_parser'
 require './app/services/commands_executor'
 
 require './app/commands/null_command'
+require './app/commands/show_help'
+require './app/commands/generate_numbers'
