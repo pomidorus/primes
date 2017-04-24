@@ -1,11 +1,12 @@
 require_relative 'command'
 
 class GenerateNumbers < Command
-  def initialize
+  def initialize(numbers_generator)
     super Constants::GENERATE_DESCRIPTION
+    @numbers_generator = numbers_generator
   end
 
   def execute(args)
-    puts 'generate numbers'
+    @numbers_generator.generate(args[0].to_i)
   end
 end

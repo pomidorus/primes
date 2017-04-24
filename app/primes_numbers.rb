@@ -2,7 +2,9 @@ require_relative 'primes_numbers_requires'
 
 class PrimesNumbers
   def initialize
-    generate_cmd = GenerateNumbers.new
+    number_generator = NumberGenerator.new
+
+    generate_cmd = GenerateNumbers.new(number_generator)
     show_help_cmd = ShowHelp.new
     null_cmd = NullCommand.new
 
