@@ -11,6 +11,8 @@ class NumberGenerator
       @primes_numbers << @number if is_prime?(@number)
       @number += 2
     end
+
+    puts "First #{n} prime numbers generated"
   end
 
   def save

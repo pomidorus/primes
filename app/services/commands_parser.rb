@@ -16,6 +16,8 @@ class CommandsParser
       when /#{Constants::GENERATE_CMD}/
         puts 'Please provide N prime numbers for this command -  `generate N`'
         Constants::NOT_FOUND_MSG
+      when /#{Constants::SHOW_M_TABLE_CMD}/
+        Constants::SHOW_M_TABLE_CMD
       else
         Constants::NOT_FOUND_MSG
     end

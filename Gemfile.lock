@@ -2,12 +2,16 @@ GEM
   remote: https://rubygems.org/
   specs:
     minitest (5.5.1)
+    terminal-table (1.7.3)
+      unicode-display_width (~> 1.1.1)
+    unicode-display_width (1.1.3)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
   minitest (= 5.5.1)
+  terminal-table
 
 RUBY VERSION
    ruby 2.4.0p0
