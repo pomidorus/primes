@@ -28,11 +28,14 @@ class NumberGenerator
 
   def is_prime?(number)
     return false if number < 2
+
     top = Math.sqrt(number).to_i
     (2..top).each do |x|
       q, r = number.divmod x
       return true if q < x
       return false if r == 0
     end
+
+    true
   end
 end
