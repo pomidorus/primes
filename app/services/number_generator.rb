@@ -1,7 +1,6 @@
 class NumberGenerator
   def initialize
     @primes_numbers = [2]
-    @primes = [2, 3, 5, 7, 11]
     @number = 1
   end
 
@@ -27,9 +26,10 @@ class NumberGenerator
 
   def is_prime?(number)
     return false if number < 2
-    @primes.each do |num|
-      q, r = number.divmod num
-      return true if q < num
+    top = Math.sqrt(number).to_i
+    (2..top).each do |x|
+      q, r = number.divmod x
+      return true if q < x
       return false if r == 0
     end
   end
