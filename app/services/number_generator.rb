@@ -7,7 +7,7 @@ class NumberGenerator
 
   def generate(n)
     raise ArgumentError, "Expected an integer, got #{n}" unless n.respond_to?(:integer?) && n.integer?
-    while @primes_numbers.length <= n do
+    while @primes_numbers.length < n do
       @primes_numbers << @number if is_prime?(@number)
       @number += 2
     end
@@ -16,7 +16,11 @@ class NumberGenerator
   end
 
   def save
+    f = File.open('primes.txt', 'w')
 
+    f.puts @primes_numbers.join(' ')
+
+    f.close
   end
 
   private

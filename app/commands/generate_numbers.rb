@@ -8,5 +8,6 @@ class GenerateNumbers < Command
 
   def execute(args)
     @numbers_generator.generate(args[0].to_i)
+    @numbers_generator.save
   end
 end
