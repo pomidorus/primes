@@ -1,4 +1,6 @@
 class NumberGenerator
+  attr_reader :primes_numbers
+
   def initialize
     @primes_numbers = [2]
     @number = 1
